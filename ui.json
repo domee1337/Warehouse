@@ -1,0 +1,11 @@
+{
+    "defaultEntryPoint": "index.html",
+    "namespace": "Warehouse",
+    "menuEntries": [
+        {
+        "label": "Warehouse",
+        "menu": "stock",
+        "urlKey": "Warehouse",
+        "entryPoint": "index.html"
+        }
+    ]

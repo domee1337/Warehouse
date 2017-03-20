@@ -1,0 +1,8 @@
+{
+    "name": "Plenty Warehouse Plugin",
+    "description": "Warehouse",
+    "namespace": "Warehouse",
+    "author": "Pascal Herrewyn GmbH",
+    "type": "backend",
+    "serviceProvider": "Warehouse\\Providers\\WarehouseServiceProvider"
+}
