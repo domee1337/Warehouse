@@ -1,7 +1,7 @@
 {
     "name"              : "PluginXY",
     "marketplaceName"   : {"de":"German display name of plugin","en":"English display name of plugin"},
-    "namespace"         : "XY",
+    "namespace"         : "Warehouse",
     "type"              : "template",
     "version"           : "1.0.0",
     "license"           : "The license for the plugin",
