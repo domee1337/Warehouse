@@ -5,7 +5,7 @@ namespace Warehouse\Controllers;
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Http\Request;
 use Plenty\Plugin\Templates\Twig;
-use Plenty\Modules\StockManagement\Stock\Contracts\StockRepositoryContract
+use Plenty\Modules\StockManagement\Stock\Contracts\StockRepositoryContract;
 
 /**
  * Class ContentController
