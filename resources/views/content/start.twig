@@ -1,0 +1,56 @@
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="{{ plugin_path('Warehouse') }}/js/base.js"></script>
+<script src="{{ plugin_path('Warehouse') }}/js/start.js"></script>
+<link rel="stylesheet" href="{{ plugin_path('Warehouse') }}/css/basic.css">
+
+<!-- SPINNER START -->
+<div id='load' style='display: none;'>
+  <div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+</div>
+<!-- SPINNER END -->
+
+<!-- LOGIN FORM START -->
+<div id='login' style='display: none;'>
+  <div class="login">
+    <h3>Login</h3>
+    <br />
+    <input type="text" placeholder="Benutzername" id="username" class="form-control">
+    <input type="password" placeholder="Passwort" id="password" class="form-control">
+    <input type="button" class="btn btn-primary" value="Anmelden" id="submit">
+    <br />
+  </div>
+</div>
+<!-- LOGIN FORM END -->
+
+<div class="container">
+  <h1>Einbuchen</h1>
+  <!-- Warehouses[0] START -->
+  <div class="warehouses">
+    {% if warehouses is not null %}
+      {% for warehouse in warehouses %}
+      <!--
+        <label>
+          <input type="checkbox" class="warehousecheckbox" whid="{{ warehouse.id }}" > {{ warehouse.name }}
+
+        &nbsp;</label>-->
+      {% endfor %}
+      <input type="text" class="form-control findArticle" placeholder="EAN">
+      <input type="button" class="btn back" value="Zurück" disabled>
+      <div id="output"></div>
+      <br />
+      <p class="inline">Menge: </p><input type="number" id="menge" value="1" class="form-control inline"><input type="checkbox" id="standart_menge"><p class="inline">Standardisierte Menge</p>
+      <input type="text" id="lagerortean" placeholder="Lagerortbarcode" class="form-control locationEan" disabled>
+    {% else %}
+      <p>Bitte legen Sie ein Lager an</p>
+    {% endif %}
+  </div>
+  <!-- Warehouses[0] END -->
+</div>
